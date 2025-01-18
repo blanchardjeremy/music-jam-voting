@@ -3,10 +3,9 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { useRouter } from 'next/navigation';
-import CreateJamModal from "@/components/CreateJamModal";
 import { TrashIcon } from "@heroicons/react/24/outline";
 import ConfirmDialog from "@/components/ConfirmDialog";
-import Loading from "@/app/loading";
+import LoadingBlock from "@/components/LoadingBlock";
 
 export default function Home() {
   const router = useRouter();
@@ -83,7 +82,7 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <Loading />
+      <LoadingBlock />
     );
   }
 
